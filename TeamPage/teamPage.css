@@ -1,0 +1,165 @@
+/* Default styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: hsla(0, 0%, 0%, 1);
+  font-family: 'Poppins';
+}
+
+html {
+  background: hsla(0, 0%, 98%, 1);
+}
+
+body {
+
+}
+
+b {
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  padding: 12px 0;
+  margin-top: auto;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  text-align: center;
+  color: hsla(0, 0%, 74%, 1);
+}
+
+footer > b > a {  
+  font-family: 'Montserrat';
+  color: hsla(0, 0%, 74%, 1);
+  text-decoration: underline;
+}
+
+.TeamPage--main {
+  padding: 120px 240px 0;
+}
+
+@media screen and (max-width: 1330px) {
+  .TeamPage--main {
+    padding: 120px 120px 0;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .TeamPage--main {
+    padding: 60px 60px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .TeamPage--main {
+    padding: 70px 12px 0;
+  }
+}
+
+.TeamPage--info {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .TeamPage--info {
+    flex-direction: column;
+  }
+}
+
+.TeamPage--title {
+  font-family: 'PT Serif';
+  letter-spacing: -0.045em;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.TeamPage--description {
+  width: 440px;
+  margin-left: 200px;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+}
+
+@media screen and (max-width: 768px) {
+  .TeamPage--description {
+    width: -webkit-fill-available;
+    margin-left: 0;
+    font-size: 1.125rem;
+    line-height: 1.688rem;
+    margin-top: 38px;
+  }
+}
+
+.TeamPage--descriptionTitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.TeamPage--team {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px 24px;
+}
+
+.TeamPage--figure {
+  /* border: 1px solid black; */
+  width: min-content;
+}
+
+/* Targetting cells from 2nd column */
+.TeamPage--figure:nth-child(3n-1) {
+  margin-top: 80px;
+}
+
+/* Tablets and mobiles */
+@media screen and (max-width: 1024px) {
+  .TeamPage--team {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 24px;
+  }
+  
+  /* Resetting */
+  .TeamPage--figure:nth-child(3n-1) {
+    margin-top: 0;
+  }
+
+  /* Targetting cells from 2nd column */
+  .TeamPage--figure:nth-child(2n) {
+    margin-top: 80px;
+  }
+}
+
+.TeamPage--photoWrapper {
+  display: flex;
+  max-width: 238px;
+}
+
+.TeamPage--photo {
+}
+
+@media screen and (max-width: 768px) {
+  .TeamPage--photoWrapper {
+    max-width: 138px;
+  }
+}
+
+.TeamPage--job {
+  font-family: 'PT Serif';
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  writing-mode: vertical-rl;
+  margin-left: 12px;
+}
+
+.TeamPage--name {
+  margin: 16px 0;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+}
