@@ -1,2 +1,2 @@
 # devchallenges-responsiveweb
-devchallenges.io responsive web developer path
+devchallenges.io responsive web developer path.
