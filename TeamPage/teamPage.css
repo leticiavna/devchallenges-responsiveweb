@@ -13,8 +13,8 @@ html {
   background: hsla(0, 0%, 98%, 1);
 }
 
-body {
-
+figure {
+  margin: 0;
 }
 
 b {
@@ -76,22 +76,23 @@ footer > b > a {
   font-size: 2.25rem;
   line-height: 3rem;
   font-weight: 700;
+  flex: none;
 }
 
 .TeamPage--description {
-  width: 440px;
   margin-left: 200px;
   font-size: 1.125rem;
   line-height: 1.688rem;
+  width: 440px;
 }
 
 @media screen and (max-width: 768px) {
   .TeamPage--description {
-    width: -webkit-fill-available;
     margin-left: 0;
     font-size: 1.125rem;
     line-height: 1.688rem;
     margin-top: 38px;
+    width: auto;
   }
 }
 
@@ -104,24 +105,18 @@ footer > b > a {
   margin-top: 64px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px 24px;
-}
-
-.TeamPage--figure {
-  /* border: 1px solid black; */
-  width: min-content;
+  gap: 24px 48px;
 }
 
 /* Targetting cells from 2nd column */
 .TeamPage--figure:nth-child(3n-1) {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 /* Tablets and mobiles */
 @media screen and (max-width: 1024px) {
   .TeamPage--team {
     grid-template-columns: 1fr 1fr;
-    gap: 24px 24px;
   }
   
   /* Resetting */
@@ -131,22 +126,23 @@ footer > b > a {
 
   /* Targetting cells from 2nd column */
   .TeamPage--figure:nth-child(2n) {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 
+/* 
+ * CSS Aspect Ratio https://www.w3schools.com/howto/howto_css_aspect_ratio.asp
+ * Also called The “Netflix” way wrapping the image with a relative padded parent 
+ */
 .TeamPage--photoWrapper {
   display: flex;
-  max-width: 238px;
+  position: relative;
+  -webkit-text-stroke-width: thin;
 }
 
 .TeamPage--photo {
-}
-
-@media screen and (max-width: 768px) {
-  .TeamPage--photoWrapper {
-    max-width: 138px;
-  }
+  width: 100%;
+  height: auto;
 }
 
 .TeamPage--job {
