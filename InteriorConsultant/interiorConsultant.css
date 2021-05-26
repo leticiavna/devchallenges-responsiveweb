@@ -1,0 +1,170 @@
+/* Default styles */
+
+:root {
+  --white: hsla(0, 0%, 100%, 1);
+  --background: hsla(270, 4%, 9%, 1);
+  --gray1: hsla(0, 0%, 66%, 1);
+  --gray2: hsla(0, 0%, 51%, 1);
+  --gray3: hsla(0, 0%, 77%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  color: var(--white);
+  list-style: none;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  padding: 8px;
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  
+  transition: 300ms ease-out;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--background);
+}
+
+b {
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  padding: 12px 0;
+  margin-top: auto;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--gray1);
+}
+
+footer > b > a {  
+  color: var(--gray1);
+  text-decoration: underline;
+}
+
+header {
+  padding: 42px 76px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 8px;
+  cursor: pointer;
+  transition: 300ms ease-out;
+}
+
+ul li:not(:last-child) {
+  margin-right: 42px;
+}
+
+.selected, 
+li:hover {
+  font-weight: 700;
+  border-bottom: 1px solid var(--white); 
+}
+
+.InteriorConsultant--section {
+  display: flex;
+  align-items: center;
+  padding: 76px;
+}
+
+.InteriorConsultant--imageWrapper {
+  position: relative;
+}
+
+.InteriorConsultant--imageWrapper > img {
+  width: 100%;
+  height: auto;
+}
+
+.InteriorConsultant--title {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  /* todo alter to rem */
+  font-size: 3rem;
+  line-height: 3.813rem;
+  margin-bottom: 40px;
+}
+
+.InteriorConsultant--p {
+  margin-bottom: 48px;
+  font-size: 1.5rem;
+  line-height: 1.813rem;
+}
+
+.InteriorConsultant--readMore {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.InteriorConsultant--readMore i {
+  margin-left: 14px;
+}
+
+.InteriorConsultant--tweet {
+  padding: 26px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: var(--background);
+  position: absolute;
+  right: 20px;
+  bottom: -100px;
+}
+
+.InteriorConsultant--tweetAuthor {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.InteriorConsultant--tweetPhoto {
+  border-radius: 50%;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.InteriorConsultant--tweetAuthorInfo {
+
+}
+
+.InteriorConsultant--tweetJob {
+  color: var(--gray2);
+  margin-top: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.InteriorConsultant--tweetContent {
+  font-family: 'Lora';
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.938rem;
+  font-weight: 700;
+}
