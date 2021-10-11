@@ -16,9 +16,6 @@
   font-family: 'Montserrat';
   color: var(--white);
   list-style: none;
-}
-
-html {
   background: var(--background);
 }
 
@@ -26,25 +23,11 @@ body {
   height: 100%;
 }
 
-button {
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid var(--white);
-  padding: 8px;
-  font-family: 'Crimson Pro';
-  font-weight: 200;
-  
-  transition: 300ms ease-out;
-}
-
-button:hover {
-  background-color: var(--white);
-  color: var(--background);
-}
-
 b {
   font-weight: 700;
 }
+
+/* Footer styles */
 
 footer {
   position: fixed;
@@ -62,6 +45,8 @@ footer > b > a {
   text-decoration: underline;
 }
 
+/* Header styles */
+
 header {
   padding: 42px 76px 0;
   display: flex;
@@ -69,52 +54,144 @@ header {
   justify-content: space-between;
 }
 
-ul {
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 12px;
+  }
+}
+
+.InteriorConsultant__header-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  padding: 8px;
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  
+  transition: 300ms ease-out;
+}
+
+.InteriorConsultant__header-button:hover {
+  background-color: var(--white);
+  color: var(--background);
+}
+
+/* Menu styles */
+
+.InteriorConsultant__list {
   display: flex;
 }
 
-li {
+.InteriorConsultant__list li {
   padding: 8px;
   cursor: pointer;
   transition: 300ms ease-out;
 }
 
-ul li:not(:last-child) {
-  margin-right: 42px;
+@media screen and (min-width: 1024px) {
+  .InteriorConsultant__list li:not(:last-child) {
+    margin-right: 42px;
+  }
 }
 
 .selected, 
-li:hover {
+.InteriorConsultant__list li:hover {
   font-weight: 700;
   border-bottom: 1px solid var(--white); 
 }
 
+@media screen and (max-width: 1024px) {
+  .InteriorConsultant__list {
+    flex-direction: column;
+    place-items: center;
+  }
+
+  .InteriorConsultant__list li {
+    margin-top: 24px;
+  }
+}
+
+/* Responsive (hamburguer) menu */
+
+.InteriorConsultant__menu-responsive-link {
+  display: none;
+}
+
+@media screen and (max-width: 1024px)  {
+  .InteriorConsultant__menu-responsive-link {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1024px)  {
+  .InteriorConsultant__menu {
+    will-change: transform;
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--background);
+    /* animate slide up/down */
+    display: none;
+    transform: translateY(100%);
+    transition: transform 0.2s ease;
+  }
+
+  .InteriorConsultant__menu:target {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .InteriorConsultant__menu-responsive-close {
+    /* Material icons is a font, so this works for this icon */
+    text-align: right;
+  }
+}
+
+/* Section style */
+
 .InteriorConsultant--section {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 76px;
 }
 
+@media screen and (max-width: 1024px)  {
+  .InteriorConsultant--section {
+    padding: 12px;
+    flex-direction: column;
+  }
+}
+
 .InteriorConsultant--text {
-  width: 50%;
-  margin-right: 140px;
+  max-width: 35%;
+  margin: 10% 5% 0 0;
+}
+
+@media screen and (max-width: 1024px)  {
+  .InteriorConsultant--text {
+    max-width: 70%;
+    align-self: start;
+  }
 }
 
 .InteriorConsultant--imageWrapper {
   position: relative;
-  max-width: 880px;
+  max-width: 100%;
 }
 
 .InteriorConsultant--imageWrapper > img {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .InteriorConsultant--title {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 500;
-  /* todo alter to rem */
   font-size: 3rem;
   line-height: 3.813rem;
   margin-bottom: 40px;
@@ -133,18 +210,35 @@ li:hover {
   font-weight: 700;
 }
 
-.InteriorConsultant--readMore i {
+@media screen and (max-width: 1024px) {
+  .InteriorConsultant--title {
+    font-size: 2.25rem;
+  }
+ 
+  .InteriorConsultant--p, .InteriorConsultant--readMore {
+    font-size: 0.875rem;
+  }
+
+  .InteriorConsultant--p {
+    line-height: 1.063rem;
+  }
+}
+
+.InteriorConsultant--readMore span {
   margin-left: 14px;
 }
 
+/* Tweet style */
+
 .InteriorConsultant--tweet {
   padding: 26px;
+  max-width: 410px;
+  width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: var(--background);
-  position: absolute;
-  left: 40%;
-  bottom: 20%;
-  width: 30%;
+  position: relative;
+  left: 30%;
+  bottom: 45px;
 }
 
 .InteriorConsultant--tweetAuthor {
@@ -157,10 +251,6 @@ li:hover {
   border-radius: 50%;
   width: 50px;
   margin-right: 20px;
-}
-
-.InteriorConsultant--tweetAuthorInfo {
-
 }
 
 .InteriorConsultant--tweetJob {
