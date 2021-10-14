@@ -47,20 +47,14 @@ footer > b > a {
 
 /* Header styles */
 
-header {
-  padding: 42px 76px 0;
+.InteriorConsultant__nav {
   display: flex;
+  padding: 42px 76px 0;
   align-items: center;
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1024px) {
-  header {
-    padding: 12px;
-  }
-}
-
-.InteriorConsultant__header-button {
+.InteriorConsultant__nav-button {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid var(--white);
@@ -71,83 +65,82 @@ header {
   transition: 300ms ease-out;
 }
 
-.InteriorConsultant__header-button:hover {
+.InteriorConsultant__nav-button:hover {
   background-color: var(--white);
   color: var(--background);
 }
 
-/* Menu styles */
-
-.InteriorConsultant__list {
+.InteriorConsultant__menu {
   display: flex;
 }
 
-.InteriorConsultant__list li {
+.InteriorConsultant__menu li {
   padding: 8px;
   cursor: pointer;
   transition: 300ms ease-out;
 }
 
-@media screen and (min-width: 1024px) {
-  .InteriorConsultant__list li:not(:last-child) {
-    margin-right: 42px;
-  }
-}
-
 .selected, 
-.InteriorConsultant__list li:hover {
+.InteriorConsultant__menu li:hover {
   font-weight: 700;
   border-bottom: 1px solid var(--white); 
 }
 
-@media screen and (max-width: 1024px) {
-  .InteriorConsultant__list {
-    flex-direction: column;
-    place-items: center;
-  }
-
-  .InteriorConsultant__list li {
-    margin-top: 24px;
-  }
-}
-
-/* Responsive (hamburguer) menu */
-
-.InteriorConsultant__menu-responsive-link {
+.InteriorConsultant__menu-responsive-link,
+.InteriorConsultant__menu-responsive-close {
   display: none;
 }
 
-@media screen and (max-width: 1024px)  {
+/* Responsive menu (hamburger) style */
+@media screen and (max-width: 1024px) {
+  .InteriorConsultant__nav {
+    padding: 12px;
+  }
+
   .InteriorConsultant__menu-responsive-link {
     display: block;
-    background-color: transparent;
-    border: none;
   }
-}
 
-@media screen and (max-width: 1024px)  {
   .InteriorConsultant__menu {
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
     will-change: transform;
     position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
     z-index: 1000;
-    width: 100vw;
-    height: 100vh;
     overflow: hidden;
     background: var(--background);
     /* animate slide up/down */
     display: none;
-    transform: translateY(100%);
-    transition: transform 0.2s ease;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
+  .InteriorConsultant__menu li {
+    margin-top: 24px;
+  }
+  
   .InteriorConsultant__menu:target {
-    display: block;
-    transform: translateY(0);
+    display: flex;
+    transform: none;
   }
 
   .InteriorConsultant__menu-responsive-close {
     /* Material icons is a font, so this works for this icon */
+    display: block;
     text-align: right;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .InteriorConsultant__menu li:not(:last-child) {
+    margin-right: 42px;
   }
 }
 
