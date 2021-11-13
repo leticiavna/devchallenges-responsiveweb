@@ -5,29 +5,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="interiorConsultant.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   </head>
   <body>
-    <header>
-      <button>THIS INTERIOR</button>
-      <nav>
-        <ul>
-          <li class="selected">Home</li>
-          <li>Collection</li>
-          <li>About</li>
-          <li>Contact</li>
+    <nav class="InteriorConsultant__nav">
+      <button class="InteriorConsultant__nav-button">THIS INTERIOR</button>
+
+      <div id="menu" class="InteriorConsultant__menu">
+        <a href="#" onclick="removeScrollClass()" class="InteriorConsultant__menu-responsive-link InteriorConsultant__menu-responsive-close">
+          <span class="material-icons material-icons.md-light">close</span>
+        </a>
+        <ul class="InteriorConsultant__ul">      
+          <li class="selected"><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
-      </nav>
-    </header>
-    <section class="InteriorConsultant--section">
+      </div>
+      <a href="#menu" onclick="addScrollClass()" class="InteriorConsultant__menu-responsive-link InteriorConsultant__menu-responsive-hamburger">
+        <span class="material-icons material-icons.md-light">menu</span>
+      </a>
+    </nav>
+
+    <main class="InteriorConsultant--section">
       <div class="InteriorConsultant--text">
         <h1 class="InteriorConsultant--title">Modern interior</h1>
         <p class="InteriorConsultant--p">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
-        <a class="InteriorConsultant--readMore" href="#">Read more <i class="material-icons">arrow_forward</i></a>
+        <a class="InteriorConsultant--readMore" href="#">Read more <span class="material-icons material-icons.md-light">arrow_forward</span></a>
       </div>
-      <div>
-        <div class="InteriorConsultant--imageWrapper">
-          <img src="assets/photo1.png">
-        </div>
+      <div class="InteriorConsultant--imageWrapper">
+        <img src="assets/photo1.png">
         <div class="InteriorConsultant--tweet">
           <div class="InteriorConsultant--tweetAuthor">
             <img class="InteriorConsultant--tweetPhoto" src="assets/photo2.png">
@@ -37,11 +44,20 @@
             </div>
           </div>
           <p class="InteriorConsultant--tweetContent">Designed in 2020 by Aliza Webber</p>
-        </div>
+        </div>    
       </div>
-  </section>
+    </main>
   <footer>
     created by <b><a href="https://github.com/leticiavna">leticiavna</a></b> - devChallenges.io
   </footer>
   </body>
+  <script type="text/javascript">
+    // When the menu is active, lock body scroll
+    function removeScrollClass(event) {
+      document.querySelector('body').classList.remove('no-scroll');
+    }
+    function addScrollClass(event) {
+      document.querySelector('body').classList.add('no-scroll');
+    }
+    </script>
 </html>

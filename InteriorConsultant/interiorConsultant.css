@@ -1,6 +1,7 @@
 /* Default styles */
 
 :root {
+  --responsive-breakpoint: 1024px;
   --white: hsla(0, 0%, 100%, 1);
   --background: hsla(270, 4%, 9%, 1);
   --gray1: hsla(0, 0%, 66%, 1);
@@ -16,9 +17,6 @@
   font-family: 'Montserrat';
   color: var(--white);
   list-style: none;
-}
-
-html {
   background: var(--background);
 }
 
@@ -26,25 +24,11 @@ body {
   height: 100%;
 }
 
-button {
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid var(--white);
-  padding: 8px;
-  font-family: 'Crimson Pro';
-  font-weight: 200;
-  
-  transition: 300ms ease-out;
-}
-
-button:hover {
-  background-color: var(--white);
-  color: var(--background);
-}
-
 b {
   font-weight: 700;
 }
+
+/* Footer styles */
 
 footer {
   position: fixed;
@@ -62,59 +46,159 @@ footer > b > a {
   text-decoration: underline;
 }
 
-header {
-  padding: 42px 76px 0;
+/* Header styles */
+
+.InteriorConsultant__nav {
   display: flex;
+  padding: 42px 76px 0;
   align-items: center;
   justify-content: space-between;
 }
 
-ul {
+.InteriorConsultant__nav-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  padding: 8px;
+  font-family: 'Crimson Pro';
+  font-weight: 200;
+  
+  transition: 300ms ease-out;
+}
+
+.InteriorConsultant__nav-button:hover {
+  background-color: var(--white);
+  color: var(--background);
+}
+
+.InteriorConsultant__menu,
+.InteriorConsultant__ul {
   display: flex;
 }
 
-li {
+.InteriorConsultant__menu li {
   padding: 8px;
   cursor: pointer;
   transition: 300ms ease-out;
 }
 
-ul li:not(:last-child) {
-  margin-right: 42px;
-}
-
 .selected, 
-li:hover {
+.InteriorConsultant__menu li:hover {
   font-weight: 700;
   border-bottom: 1px solid var(--white); 
 }
 
+.InteriorConsultant__menu-responsive-link,
+.InteriorConsultant__menu-responsive-close {
+  display: none;
+}
+
+/* Responsive menu (hamburger) style */
+@media screen and (max-width: 1024px) {
+  .InteriorConsultant__nav {
+    padding: 12px;
+  }
+
+  .InteriorConsultant__menu-responsive-link {
+    display: block;
+  }
+
+  .InteriorConsultant__menu {
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    z-index: 1000;
+    overflow: hidden;
+    background: var(--background);
+    /* animate slide up/down */
+    display: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  .InteriorConsultant__ul {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .InteriorConsultant__menu li {
+    margin-top: 24px;
+  }
+  
+  .InteriorConsultant__menu:target {
+    transform: none;
+    padding: 16px;
+    left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: 100%;
+  }
+
+  .InteriorConsultant__menu-responsive-close {
+    /* Material icons is a font, so this works for this icon */
+    text-align: right;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .InteriorConsultant__menu li:not(:last-child) {
+    margin-right: 42px;
+  }
+}
+
+/* Section style */
+
 .InteriorConsultant--section {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 76px;
 }
 
+@media screen and (max-width: 1024px)  {
+  .InteriorConsultant--section {
+    padding: 12px;
+    flex-direction: column;
+  }
+}
+
 .InteriorConsultant--text {
-  width: 50%;
-  margin-right: 140px;
+  max-width: 35%;
+  margin: 10% 5% 0 0;
+}
+
+@media screen and (max-width: 1024px)  {
+  .InteriorConsultant--text {
+    max-width: 70%;
+    align-self: start;
+  }
 }
 
 .InteriorConsultant--imageWrapper {
-  position: relative;
-  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin: 24px 0;
 }
 
 .InteriorConsultant--imageWrapper > img {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .InteriorConsultant--title {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 500;
-  /* todo alter to rem */
   font-size: 3rem;
   line-height: 3.813rem;
   margin-bottom: 40px;
@@ -133,34 +217,46 @@ li:hover {
   font-weight: 700;
 }
 
-.InteriorConsultant--readMore i {
+@media screen and (max-width: 1024px) {
+  .InteriorConsultant--title {
+    font-size: 2.25rem;
+  }
+ 
+  .InteriorConsultant--p, .InteriorConsultant--readMore {
+    font-size: 0.875rem;
+  }
+
+  .InteriorConsultant--p {
+    line-height: 1.063rem;
+  }
+}
+
+.InteriorConsultant--readMore span {
   margin-left: 14px;
 }
 
+/* Tweet style */
+
 .InteriorConsultant--tweet {
-  padding: 26px;
+  padding: 24px;
+  max-width: 410px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: var(--background);
-  position: absolute;
-  left: 40%;
-  bottom: 20%;
-  width: 30%;
+  margin-left: 25%;
+  margin-top: -15%;
 }
 
 .InteriorConsultant--tweetAuthor {
   display: flex;
   margin-bottom: 30px;
+  font-size: 0.875rem;
   align-items: center;
 }
 
 .InteriorConsultant--tweetPhoto {
   border-radius: 50%;
-  width: 50px;
+  width: 20%;
   margin-right: 20px;
-}
-
-.InteriorConsultant--tweetAuthorInfo {
-
 }
 
 .InteriorConsultant--tweetJob {
@@ -176,4 +272,36 @@ li:hover {
   font-size: 1.5rem;
   line-height: 1.938rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .InteriorConsultant--tweet {
+    padding: 16px;
+    max-width: 300px;
+  }
+
+  .InteriorConsultant--tweetContent {
+    font-size: 1.125rem;
+  }
+
+  .InteriorConsultant--tweetJob {
+    font-size: 0.625rem;
+  }
+
+  .InteriorConsultant--tweetAuthor {
+    font-size: 0.75rem;
+  }
+
+}
+
+
+@media screen and (max-width: 425px) {
+  .InteriorConsultant--tweet {
+    margin-left: 10%;
+  }
+}
+
+/* Class created to block scroll in responsive menu */
+.no-scroll {
+  overflow: hidden;
 }
