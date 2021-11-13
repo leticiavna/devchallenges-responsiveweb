@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://dw-rw-interiorconsultant.surge.sh/">
+    <a href="https://dc-rw-interiorconsultant.surge.sh/">
       Demo
     </a>
     <span> | </span>
