@@ -12,22 +12,22 @@
       <button class="InteriorConsultant__nav-button">THIS INTERIOR</button>
 
       <div id="menu" class="InteriorConsultant__menu">
-        <a href="#" class="InteriorConsultant__menu-responsive-link InteriorConsultant__menu-responsive-close">
+        <a href="#" onclick="removeScrollClass()" class="InteriorConsultant__menu-responsive-link InteriorConsultant__menu-responsive-close">
           <span class="material-icons material-icons.md-light">close</span>
         </a>
-        <ul>      
+        <ul class="InteriorConsultant__ul">      
           <li class="selected"><a href="#">Home</a></li>
           <li><a href="#">Collection</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-      <a href="#menu" class="InteriorConsultant__menu-responsive-link InteriorConsultant__menu-responsive-hamburger">
+      <a href="#menu" onclick="addScrollClass()" class="InteriorConsultant__menu-responsive-link InteriorConsultant__menu-responsive-hamburger">
         <span class="material-icons material-icons.md-light">menu</span>
       </a>
     </nav>
 
-    <section class="InteriorConsultant--section">
+    <main class="InteriorConsultant--section">
       <div class="InteriorConsultant--text">
         <h1 class="InteriorConsultant--title">Modern interior</h1>
         <p class="InteriorConsultant--p">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
@@ -46,9 +46,18 @@
           <p class="InteriorConsultant--tweetContent">Designed in 2020 by Aliza Webber</p>
         </div>    
       </div>
-  </section>
+    </main>
   <footer>
     created by <b><a href="https://github.com/leticiavna">leticiavna</a></b> - devChallenges.io
   </footer>
   </body>
+  <script type="text/javascript">
+    // When the menu is active, lock body scroll
+    function removeScrollClass(event) {
+      document.querySelector('body').classList.remove('no-scroll');
+    }
+    function addScrollClass(event) {
+      document.querySelector('body').classList.add('no-scroll');
+    }
+    </script>
 </html>

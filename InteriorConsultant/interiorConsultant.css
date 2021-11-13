@@ -1,6 +1,7 @@
 /* Default styles */
 
 :root {
+  --responsive-breakpoint: 1024px;
   --white: hsla(0, 0%, 100%, 1);
   --background: hsla(270, 4%, 9%, 1);
   --gray1: hsla(0, 0%, 66%, 1);
@@ -70,7 +71,8 @@ footer > b > a {
   color: var(--background);
 }
 
-.InteriorConsultant__menu {
+.InteriorConsultant__menu,
+.InteriorConsultant__ul {
   display: flex;
 }
 
@@ -122,23 +124,33 @@ footer > b > a {
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
+  .InteriorConsultant__ul {
+    text-align: center;
+    flex-direction: column;
+  }
+
   .InteriorConsultant__menu li {
     margin-top: 24px;
   }
   
   .InteriorConsultant__menu:target {
-    display: flex;
     transform: none;
+    padding: 16px;
+    left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: 100%;
   }
 
   .InteriorConsultant__menu-responsive-close {
     /* Material icons is a font, so this works for this icon */
-    display: block;
     text-align: right;
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .InteriorConsultant__menu li:not(:last-child) {
     margin-right: 42px;
   }
@@ -172,8 +184,10 @@ footer > b > a {
 }
 
 .InteriorConsultant--imageWrapper {
-  position: relative;
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin: 24px 0;
 }
 
 .InteriorConsultant--imageWrapper > img {
@@ -224,25 +238,24 @@ footer > b > a {
 /* Tweet style */
 
 .InteriorConsultant--tweet {
-  padding: 26px;
+  padding: 24px;
   max-width: 410px;
-  width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: var(--background);
-  position: relative;
-  left: 30%;
-  bottom: 45px;
+  margin-left: 25%;
+  margin-top: -15%;
 }
 
 .InteriorConsultant--tweetAuthor {
   display: flex;
   margin-bottom: 30px;
+  font-size: 0.875rem;
   align-items: center;
 }
 
 .InteriorConsultant--tweetPhoto {
   border-radius: 50%;
-  width: 50px;
+  width: 20%;
   margin-right: 20px;
 }
 
@@ -259,4 +272,36 @@ footer > b > a {
   font-size: 1.5rem;
   line-height: 1.938rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .InteriorConsultant--tweet {
+    padding: 16px;
+    max-width: 300px;
+  }
+
+  .InteriorConsultant--tweetContent {
+    font-size: 1.125rem;
+  }
+
+  .InteriorConsultant--tweetJob {
+    font-size: 0.625rem;
+  }
+
+  .InteriorConsultant--tweetAuthor {
+    font-size: 0.75rem;
+  }
+
+}
+
+
+@media screen and (max-width: 425px) {
+  .InteriorConsultant--tweet {
+    margin-left: 10%;
+  }
+}
+
+/* Class created to block scroll in responsive menu */
+.no-scroll {
+  overflow: hidden;
 }
