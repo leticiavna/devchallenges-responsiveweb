@@ -1,0 +1,307 @@
+:root {
+  --bg: hsla(0, 0%, 100%, 1);
+  --bg-mobile: hsla(0, 0%, 98%, 1);
+  --shadow: hsla(0, 0%, 0%, 0.1);
+  /* text */
+  --black: hsla(0, 0%, 0%, 1);
+  /* titles, subtitles */
+  --gray1: hsla(0, 0%, 20%, 1);
+  /* aside & description */
+  --gray2: hsla(0, 0%, 31%, 1);
+  /* checkbox border & footer */
+  --gray3: hsla(0, 0%, 51%, 1);
+  /* aside & source link */
+  --gray4: hsla(0, 0%, 74%, 1);
+  /* 6 dots */
+  --gray5: hsla(0, 0%, 77%, 1);
+  --orange: hsla(28, 87%, 62%, 1);
+}
+
+/**
+ * Reset browser styles and default tag styles 
+ */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    background: var(--bg-mobile);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+b {
+  font-weight: 700;
+}
+
+/**
+ * Typography
+ */
+
+/* Titles do not change a lot in this layout, so we can have 3 specific classes */
+.title-preset-1 {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: var(--black);
+}
+
+.title-preset-2 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--gray1);
+}
+
+.title-preset-3 {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--gray1);
+}
+
+.title-preset-2, .title-preset-3 {
+  margin-bottom: 32px;
+}
+
+/* In the other hand, texts mix italic-bold-normal styles a lot in the layout, 
+ * so we're going to be applying the weight to the <b> and style to the <em> tags
+*/
+ 
+.text-preset-1, 
+.text-preset-2, 
+.text-preset-3, 
+.text-preset-4, 
+.text-preset-5, 
+.text-preset-6, 
+.text-preset-7, 
+.text-preset-8 {
+  font-family: Montserrat;
+}
+
+/* subtitle */
+.text-preset-1 {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--gray2);
+}
+
+.text-preset-2, .text-preset-3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-preset-2 {
+  color: var(--gray1);
+}
+
+.text-preset-3 {
+  color: var(--black);
+}
+
+.text-preset-4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray1);
+}
+
+/* source link */
+.text-preset-5 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray4);
+}
+
+/* Aside */
+.text-preset-6 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: var(--gray4);
+}
+
+.text-preset-7, .text-preset-8 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.text-preset-7 {  
+  color: var(--orange);
+}
+
+.text-preset-8 {  
+  color: var(--gray1);
+}
+
+/**
+ * Body styles
+ */
+ body {
+  padding: 48px 232px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 32px 8px;
+  }
+}
+
+/**
+ * Header styles
+ */
+.header-subtitle {
+  display: flex;
+  margin-top: 16px;
+}
+
+.header-dots {
+  margin-right: 8px;
+}
+
+.header-text-subtitle {
+  max-width: 60%;
+  text-align: justify;
+}
+
+.cheesecake-hero {
+  width: 100%;
+  margin: 48px 0;
+}
+
+
+/**
+ * Aside styles 
+ */
+.aside-card {
+  box-shadow: 0px 0px 20px var(--shadow);
+  border-radius: 12px;
+  padding: 56px 40px;
+}
+
+.aside-item {
+  display: flex;
+  align-items: center;
+}
+
+.aside-item:not(:first-child) {
+  margin-top: 40px;
+}
+
+.aside-item-information {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/**
+ * Ingredients styles
+ */
+.fieldset-items {
+  display: grid;
+}
+
+/* Styling the checkboxes */
+.fieldset-item-label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+/* Hides the browser default checkbox */
+.fieldset-item-label input {
+  display: none;
+}
+
+/* My checkbox */
+.fieldset-custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+/* Add gray hover */
+.fieldset-item-label:hover input ~ .fieldset-custom-checkbox {
+  background-color: var(--gray4);
+}
+
+/* add a orange background when checked */
+.fieldset-item-label input:checked ~ .fieldset-custom-checkbox {
+  background-color: var(--orange);
+}
+
+/* Here we can put what we want to be the "check" of the checkbox and position it accordingly */
+.fieldset-custom-checkbox:after {
+  content: "✓";
+  color: var(--bg);
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  display: none;
+}
+
+/* Shows the ✓  */
+.fieldset-item-label input:checked ~ .fieldset-custom-checkbox:after {
+  display: block;
+}
+
+
+/**
+ * Instructions styles
+ */
+
+.instructions-ol {
+  counter-reset: number-counter;
+}
+
+.instructions-ol li {
+  counter-increment: number-counter;
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.instructions-ol li::before {
+  content: counter(number-counter);
+  background: var(--orange);
+  color: var(--bg);
+  margin-right: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: Playfair Display;
+  font-weight: bold;
+}
+/**
+ * Footer styles
+ */
