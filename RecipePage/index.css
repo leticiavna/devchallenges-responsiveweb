@@ -12,7 +12,7 @@
   --gray3: hsla(0, 0%, 51%, 1);
   /* aside & source link */
   --gray4: hsla(0, 0%, 74%, 1);
-  /* 6 dots */
+  /* 6 dots, source link */
   --gray5: hsla(0, 0%, 77%, 1);
   --orange: hsla(28, 87%, 62%, 1);
 }
@@ -25,8 +25,8 @@
   padding: 0;
   border: none;
   text-decoration: none;
+  color: var(--black);
   box-sizing: border-box;
-  list-style: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -47,35 +47,35 @@ b {
  * Typography
  */
 
-/* Titles do not change a lot in this layout, so we can have 3 specific classes */
-.title-preset-1 {
-  font-family: 'Playfair Display';
+.title-preset-1, .title-preset-2, .title-preset-3 {
+  font-family: Playfair Display;
+}
+
+.title-preset-1, .title-preset-2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 64px;
+
+}
+
+.title-preset-1 {
+  font-size: 3rem;
+  line-height: 4rem;
   color: var(--black);
 }
 
 .title-preset-2 {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: var(--gray1);
+  margin: 32px 0;
 }
 
 .title-preset-3 {
-  font-family: Playfair Display;
   font-style: italic;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   color: var(--gray1);
-}
-
-.title-preset-2, .title-preset-3 {
   margin-bottom: 32px;
 }
 
@@ -87,10 +87,10 @@ b {
 .text-preset-2, 
 .text-preset-3, 
 .text-preset-4, 
+.text-preset-4, 
 .text-preset-5, 
 .text-preset-6, 
-.text-preset-7, 
-.text-preset-8 {
+.text-preset-7 {
   font-family: Montserrat;
 }
 
@@ -98,16 +98,16 @@ b {
 .text-preset-1 {
   font-style: italic;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: var(--gray2);
 }
 
 .text-preset-2, .text-preset-3 {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-preset-2 {
@@ -118,44 +118,37 @@ b {
   color: var(--black);
 }
 
-.text-preset-4 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--gray1);
-}
-
 /* source link */
-.text-preset-5 {
+.text-preset-4 {
   font-style: italic;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--gray4);
 }
 
 /* Aside */
-.text-preset-6 {
+.text-preset-5 {
   font-style: normal;
   font-weight: 700;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  margin-bottom: 4px;
   text-transform: uppercase;
   color: var(--gray4);
 }
 
-.text-preset-7, .text-preset-8 {
+.text-preset-6, .text-preset-7 {
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
 }
 
-.text-preset-7 {  
+.text-preset-6 {
   color: var(--orange);
 }
 
-.text-preset-8 {  
+.text-preset-7 {  
   color: var(--gray1);
 }
 
@@ -163,12 +156,12 @@ b {
  * Body styles
  */
  body {
-  padding: 48px 232px;
+  padding: 48px 15% 0;
 }
 
 @media screen and (max-width: 768px) {
   body {
-    padding: 32px 8px;
+    padding: 32px 8px 0;
   }
 }
 
@@ -189,6 +182,14 @@ b {
   text-align: justify;
 }
 
+
+@media screen and (max-width: 768px) {
+  .header-text-subtitle {
+    max-width: unset;
+    text-align: justify;
+  }
+}
+
 .cheesecake-hero {
   width: 100%;
   margin: 48px 0;
@@ -196,32 +197,76 @@ b {
 
 
 /**
+ * Main styles
+ */
+
+.grid-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
  * Aside styles 
  */
 .aside-card {
-  box-shadow: 0px 0px 20px var(--shadow);
-  border-radius: 12px;
-  padding: 56px 40px;
+  grid-row: 1;
+  position: static;
+  display: flex;
+  flex-flow: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .aside-card {
+    display: unset;
+    grid-row: unset;
+    box-shadow: 0px 0px 20px var(--shadow);
+    border-radius: 12px;
+    padding: 56px 40px;
+    margin-left: 10%;
+    justify-self: end;
+    height: max-content;
+    position: sticky;
+    top: 0;
+  }
 }
 
 .aside-item {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .aside-item:not(:first-child) {
   margin-top: 40px;
 }
 
+@media screen and (max-width: 768px) {
+  .aside-item:not(:first-child) {
+    width: 33%;
+  }
+}
+
+
 .aside-item-information {
   display: flex;
   flex-direction: column;
+  margin-left: 8px;
 }
 
 
 /**
  * Ingredients styles
  */
+.cheesecake-title {
+  margin-top: 24px;
+}
+
 .fieldset-items {
   display: grid;
 }
@@ -233,6 +278,7 @@ b {
   padding-left: 30px;
   margin-bottom: 4px;
   cursor: pointer;
+  text-align: justify;
 }
 
 /* Hides the browser default checkbox */
@@ -247,16 +293,20 @@ b {
   left: 0;
   height: 18px;
   width: 18px;
-  background-color: #eee;
+  background-color: var(--bg);
+  border: 1px solid var(--gray3);
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
 /* Add gray hover */
 .fieldset-item-label:hover input ~ .fieldset-custom-checkbox {
-  background-color: var(--gray4);
+  background-color: var(--gray5);
 }
 
 /* add a orange background when checked */
 .fieldset-item-label input:checked ~ .fieldset-custom-checkbox {
+  border: none;
   background-color: var(--orange);
 }
 
@@ -281,27 +331,61 @@ b {
  */
 
 .instructions-ol {
-  counter-reset: number-counter;
+  counter-reset: orange-counter;
 }
 
 .instructions-ol li {
-  counter-increment: number-counter;
+  counter-increment: orange-counter;
+  position: relative;
+  z-index: 1;
+  padding-left: 24px;
   margin-bottom: 32px;
+  margin-left: 24px;
   text-align: justify;
 }
 
-.instructions-ol li::before {
-  content: counter(number-counter);
-  background: var(--orange);
+/* Style the number */
+.instructions-ol li::marker {
+  content: counter(orange-counter);
   color: var(--bg);
-  margin-right: 16px;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-family: Playfair Display;
-  font-weight: bold;
+  font-weight: 700;
 }
+
+/* Creates a orange div and positions it in the back of the number */
+.instructions-ol li::before {
+  content: '';
+  background: var(--orange);
+  border-radius: 6px;
+
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -24px;
+
+  width: 36px;
+  height: 36px;
+}
+
+.source-link {
+  margin-bottom: 32px;
+}
+
 /**
  * Footer styles
  */
+footer {  
+  width: 100%;
+  padding: 12px 0;
+  margin-top: auto;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--gray4);
+}
+
+footer b a {
+  color: var(--gray4);
+}
