@@ -1,24 +1,8 @@
-<h1 align="center">Interior consultant</h1>
+# Interior consultant
 
-<div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-</div>
+My solution for the [Interior consultant challenge](https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb) from [Devchallenges.io](http://devchallenges.io).
 
-<div align="center">
-  <h3>
-    <a href="https://dc-rw-interiorconsultant.surge.sh/">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/InteriorConsultant">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb">
-      Challenge
-    </a>
-  </h3>
-</div>
+- [**Check out the live demo!**](https://dc-rw-interiorconsultant.surge.sh/)
 
 ## Table of Contents
 

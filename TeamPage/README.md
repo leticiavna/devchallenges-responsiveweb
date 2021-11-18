@@ -1,24 +1,8 @@
-<h1 align="center">Team page</h1>
+# Team page
 
-<div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-</div>
+My solution for the [Team page challenge](https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U) from [Devchallenges.io](http://devchallenges.io).
 
-<div align="center">
-  <h3>
-    <a href="http://dc-rw-teampage.surge.sh/">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/TeamPage">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U">
-      Challenge
-    </a>
-  </h3>
-</div>
+- [**Check out the live demo!**](http://dc-rw-teampage.surge.sh/)
 
 ## Table of Contents
 

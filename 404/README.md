@@ -1,34 +1,15 @@
-<h1 align="center">404 page</h1>
+# 404 page
 
-<div align="center">
-   Solution for the 404 page challenge from <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-</div>
+My solution for the [404 page challenge](https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY) from [Devchallenges.io](http://devchallenges.io).
 
-<div align="center">
-  <h3>
-    <a href="https://dc-rw-notfound.web.app/">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/404">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY">
-      Challenge
-    </a>
-  </h3>
-</div>
+- [**Check out the live demo!**](https://dc-rw-notfound.web.app/)
 
-<!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
 - [Overview](#overview)
 - [Built With](#built-with)
 - [Acknowledgements](#acknowledgements)
-
-<!-- OVERVIEW -->
 
 ## Overview
 
@@ -47,18 +28,8 @@ For the deployment of the sites of this responsive web trail, I wanted to take a
 - HTML and CSS only!
 - Deployed with [Firebase](https://firebase.google.com/docs/hosting)
 
-<!-- ## Features
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY) was to build an application to complete the given user stories.
--->
 
 ## Acknowledgements
 
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Top 5 free hosting sites with instructions](https://blogs.devchallenges.io/posts/tJ26U8MhZTPgBSRSwpqr)
-
-
-<!-- ## Contact
- - Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username}) -->

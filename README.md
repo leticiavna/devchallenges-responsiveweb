@@ -1,5 +1,4 @@
-# devchallenges-responsiveweb
-devchallenges.io responsive web developer path.
+# Responsive web challenges
 
 <!-- TABLE OF CONTENTS -->
 
@@ -59,3 +58,12 @@ This application/site was created as a submission to a [DevChallenges](https://d
 - GitHub [@your-username](https://{github.com/your-usermame})
 - Twitter [@your-twitter](https://{twitter.com/your-username})
 --> 
+
+- [Challenge 1 - 404 Page]((https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/404))
+- [Challenge 2 - Team Page](https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/TeamPage)
+- [Challenge 3 - Interior Consultant Page](https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/InteriorConsultant)
+- [Challenge 4 - Recipe Page](https://github.com/leticiavna/devchallenges-responsiveweb/tree/main/RecipePage)
+- [Challenge 5 - Gallery Page]
+- [Challenge 6 - Checkout Page]
+- [Challenge 7 - Edie homepage]
+- [Challenge 8 - Portfolio]

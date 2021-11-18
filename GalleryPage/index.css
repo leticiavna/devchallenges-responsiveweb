@@ -1,0 +1,129 @@
+:root {
+  /* title and info boxes numbers */
+  --gray1: hsla(160, 2%, 31%, 1);
+  /* localization */
+  --gray2: hsla(0, 0%, 66%, 1);
+  /* info boxes */
+  --gray3: hsla(0, 0%, 90%, 1);
+  /* info boxes description */
+  --gray4: hsla(0, 0%, 74%, 1);
+  /* footer */
+  --gray5: hsla(229, 19%, 77%, 1);
+}
+/**
+ * Reset browser styles and default tag styles 
+ */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+/* 
+ * Typography
+*/
+
+.text-preset-1 {
+  color: var(--gray1);
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.text-preset-2 {
+  color: var(--gray2);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.text-preset-3 {
+  color: var(--gray1);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.text-preset-4 {
+  color: var(--gray4);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* 
+ * Body styles
+*/
+body {
+  padding: 48px;
+} 
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 16px 4px;
+  }
+}
+  
+
+/* 
+ * Header styles
+ */
+.header-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  border-radius: 16px;
+  width: 100%;
+  max-width: 216px;
+} 
+
+.header-title {
+  margin-top: 16px;
+}
+
+.header-subtitle {
+  margin: 8px 0 24px;
+}
+
+.header-info-boxes {
+  display: flex;
+  text-align: center;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background: var(--gray3);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.info-box:not(:last-child) {
+  margin-right: 24px;
+}
+
+/* 
+ * Main gallery styles
+*/
+
+/*
+ * Footer styles 
+*/
+footer {  
+  width: 100%;
+  padding: 12px 0;
+  margin-top: auto;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--gray5);
+}
+
+footer b a {
+  color: var(--gray5);
+  text-decoration: underline;
+}
