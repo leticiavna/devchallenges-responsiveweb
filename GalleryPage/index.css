@@ -57,6 +57,9 @@
 */
 body {
   padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 } 
 
 @media screen and (max-width: 768px) {
@@ -161,6 +164,8 @@ footer {
   font-size: 0.875rem;
   text-align: center;
   color: var(--gray5);
+  position: relative;
+  bottom: -32px;
 }
 
 footer b a {

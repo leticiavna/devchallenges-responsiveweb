@@ -2,7 +2,7 @@
 
 My solution for the [Gallery page challenge](https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I) from [Devchallenges.io](http://devchallenges.io).
 
-- [**Check out the live demo!**]())
+- [**Check out the live demo!**](https://heuristic-ritchie-76eb9d.netlify.app/)
 
 ## Table of Contents
 
@@ -16,12 +16,13 @@ My solution for the [Gallery page challenge](https://devchallenges.io/challenges
 
 - mansory layout
 - css grid - more properties to explore
+- netlify
 
 
 ## Built With
 
 - HTML and CSS only!
-- Deployed with []()
+- Deployed with [Netlify](https://www.netlify.com/)
 
 ## Acknowledgments
 
