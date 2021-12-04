@@ -9,7 +9,6 @@ function calculateCartTotal() {
   const backbagTotal = backbagQuantity * backbagPrice;
   const shoesTotal = shoesQuantity * shoesPrice;
 
-  console.log({ shippingPrice, backbagTotal, shoesTotal });
   const total = backbagTotal + shoesTotal + shippingPrice;
 
   document.querySelector('#cartTotal').innerHTML = `$${total.toFixed(2)}`;
