@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="index.js"></script>
     <title>Checkout</title>
   </head>
 
@@ -22,10 +23,10 @@
             <span class="cart-item-discount">$54.99</span>
             <span class="cart-item-old">$94.99</span>
           </div>
-          <div class="cart-item-quantity">
-            <span class="material-icons card-item-control">remove</span>
-            <span>1</span>
-            <span class="material-icons card-item-control">add</span>
+          <div class="cart-item-quantity form-input">
+            <span onclick="operateOnCart('backbagQuantity', 'remove')" class="material-icons card-item-control card-item-control-minus">remove</span>
+            <input type="number" id="backbagQuantity" name="backbag" onchange="calculateCartTotal()" value="1" step="1" min="1" class="cart-item-quantity-input"/>
+            <span onclick="operateOnCart('backbagQuantity', 'add')" class="material-icons card-item-control card-item-control-plus">add</span>
           </div>
         </div>
       </div>
@@ -38,10 +39,10 @@
             <span class="cart-item-discount">$74.99</span>
             <span class="cart-item-old">$124.99</span>
           </div>
-          <div class="cart-item-quantity">
-            <span class="material-icons card-item-control">remove</span>
-            <span>1</span>
-            <span class="material-icons card-item-control">add</span>
+          <div class="cart-item-quantity form-input">
+            <span onclick="operateOnCart('shoesQuantity', 'remove')" class="material-icons card-item-control card-item-control-minus">remove</span>
+            <input type="number" id="shoesQuantity" name="shoes" onchange="calculateCartTotal()" value="1" step="1" min="1" class="cart-item-quantity-input"/>
+            <span onclick="operateOnCart('shoesQuantity', 'add')" class="material-icons card-item-control card-item-control-plus">add</span>
           </div>
         </div>
       </div>
@@ -49,11 +50,11 @@
       <dl class="cart-pricing">
         <div class="cart-item-total">
           <dd>Shipping:</dd>
-          <dt>$19</dt>
+          <dt id="shippingPrice">$19</dt>
         </div>
         <div class="cart-item-total">
           <dd>Total:</dd>
-          <dt>$148.98</dt>
+          <dt id="cartTotal">$148.98</dt>
         </div>
       </div>
     </aside>
@@ -95,22 +96,20 @@
             <input type="text" name="city" placeholder="Your city..." required class="form-input">
           </div>
 
-          <div class="form-grouped-inputs">
-            <div class="form-input-wrapper form-input-divided">
-              <label for="country" class="form-input-label">Country</label>
-              <span class="material-icons md-18 form-input-icon">public</span>
-              <select name="country" placeholder="Your country..." required class="form-input">
-                <option>Brazil</option>
-                <option>Canada</option>
-                <option>France</option>
-              </select>
-            </div>
+          <div class="form-input-wrapper">
+            <label for="country" class="form-input-label">Country</label>
+            <span class="material-icons md-18 form-input-icon">public</span>
+            <select name="country" placeholder="Your country..." required class="form-input">
+              <option>Brazil</option>
+              <option>Canada</option>
+              <option>France</option>
+            </select>
+          </div>
 
-            <div class="form-input-wrapper form-input-divided">
-              <label for="city" class="form-input-label">Postal code</label>
-              <span class="material-icons md-18 form-input-icon">markunread_mailbox</span>
-              <input type="text" name="postalcode" placeholder="Your postal code..." required class="form-input">
-            </div>
+          <div class="form-input-wrapper">
+            <label for="city" class="form-input-label">Postal code</label>
+            <span class="material-icons md-18 form-input-icon">markunread_mailbox</span>
+            <input type="text" name="postalcode" placeholder="Your postal code..." required class="form-input">
           </div>
 
           <div class="form-input-wrapper form-input-checkbox">

@@ -119,19 +119,33 @@ body {
 
 .cart-item-quantity {
   display: flex;
-  border: 1px solid var(--gray3);
-  border-radius: 12px;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  position: relative;
   width: 70%;
   min-width: 128px;
 }
 
+.cart-item-quantity-input {
+  background: transparent;
+  text-align: center;
+  width: 100%;
+}
+
 .card-item-control {
+  position: absolute;
   background: var(--cart-control);
   border-radius: 12px;
   color: var(--gray3);
+  top: 12px;
+}
+
+.card-item-control-minus {
+  left: 16px;
+}
+
+.card-item-control-plus {
+  right: 16px;
 }
 
 .cart-pricing {
@@ -207,7 +221,7 @@ body {
   color: var(--black);
   border: 1px solid var(--gray3);
   border-radius: 12px;
-  padding: 16px 16px 16px 48px;
+  padding: 16px 48px;
   margin-top: 4px;
   margin-bottom: 16px;
 }
