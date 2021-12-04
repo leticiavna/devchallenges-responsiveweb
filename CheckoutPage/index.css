@@ -1,0 +1,257 @@
+/* Variables */
+:root {
+  /* subtitle of the fieldset */
+  --black: hsla(0, 0%, 20%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  /* title */
+  --gray1: hsla(160, 2%, 31%, 1);
+  /* form labels */
+  --gray2: hsla(0, 0%, 31%, 1);
+  /* placeholders and borders */
+  --gray3: hsla(0, 0%, 51%, 1);
+  /* dividers and footer */
+  --gray4: hsla(0, 0%, 74%, 1);
+  /* accent */
+  --orange: hsla(28, 87%, 62%, 1);
+  /* cart background */
+  --cart-bg: hsla(0, 0%, 95%, 1);
+  /* cart item control background */
+  --cart-control: hsla(0, 0%, 88%, 1);
+}
+/**
+ * Reset browser styles and default tag styles 
+ */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+body {
+  padding: 32px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 64px 64px 0;
+    max-width: 1440px;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 1.813rem;
+  margin-bottom: 24px;
+  color: var(--gray1);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 48px;
+  }
+}
+
+.label {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  color: var(--gray2);
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+.cart {
+  border-radius: 12px;
+  background: var(--cart-bg);
+  padding: 16px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 24px;
+}
+
+.cart-item-img {
+  width: 90%;
+  border-radius: 12px;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-title {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--gray2);
+}
+
+.cart-item-prices {
+  display: flex;
+  margin: 8px 0 24px;
+}
+
+.cart-item-discount {
+  color: var(--orange);
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.cart-item-old {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  text-decoration: line-through;
+  color: var(--gray2);
+  margin-left: 8px;
+}
+
+.cart-item-quantity {
+  display: flex;
+  border: 1px solid var(--gray3);
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  width: 70%;
+  min-width: 128px;
+}
+
+.card-item-control {
+  background: var(--cart-control);
+  border-radius: 12px;
+  color: var(--gray3);
+}
+
+.cart-pricing {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  color: var(--black);
+  border-top: 1px solid var(--gray4);
+}
+
+/* Main styles */
+.main-form {
+  margin: 32px 0;
+}
+
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.form-fieldset-legend {
+  margin-bottom: 12px;
+}
+
+.form-input-wrapper {
+  /* Positioning this so i can use the absolute position in the icon relative to this wrapper element */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-input-checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-input-label, .form-input-label-checkbox {
+  color: var(--gray2);
+  display: contents;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+.form-input-label-checkbox {
+  margin-left: 8px;
+}
+
+.form-input-icon {
+  position: absolute;
+  top: 36px;
+  left: 16px;
+  color: var(--gray3);
+  font-size: 1rem;
+}
+
+.form-grouped-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input-divided {
+  width: 45%;
+}
+
+.form-input {
+  color: var(--black);
+  border: 1px solid var(--gray3);
+  border-radius: 12px;
+  padding: 16px 16px 16px 48px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.form-input:focus {
+  outline-color: var(--orange);
+}
+
+/* .form-input:invalid {
+  border: 1px solid tomato;
+}
+
+.form-input:valid {
+  border: 1px solid springgreen;
+} */
+
+.form-input::placeholder {
+  color: var(--gray3);
+}
+
+.button-continue {
+  background: var(--orange);
+  color: var(--white);
+  padding: 16px 40px;
+  border-radius: 12px;
+  width: max-content;
+  align-self: self-end;
+}
+
+/*
+ * Footer styles 
+*/
+footer {  
+  width: 100%;
+  padding: 12px 0;
+  margin-top: auto;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--gray4);
+  position: relative;
+  bottom: -32px;
+}
+
+footer b a {
+  color: var(--gray4);
+  text-decoration: underline;
+}

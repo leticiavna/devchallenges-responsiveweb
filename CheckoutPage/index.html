@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Checkout</title>
+  </head>
+
+  <body>
+    <h1 class="title">Checkout</h1>
+    <aside class="cart">
+      <div class="cart-item">
+        <img src="./assets/photo1.png" alt="Brown and Black small bag" class="cart-item-img"/>
+        <div class="cart-item-info">
+          <span class="cart-item-title">Vintage Backbag</span>
+          <div class="cart-item-prices">
+            <span class="cart-item-discount">$54.99</span>
+            <span class="cart-item-old">$94.99</span>
+          </div>
+          <div class="cart-item-quantity">
+            <span class="material-icons card-item-control">remove</span>
+            <span>1</span>
+            <span class="material-icons card-item-control">add</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="./assets/photo2.png" alt="Blue shoes with brown details" class="cart-item-img"/>
+        <div class="cart-item-info">
+          <span class="cart-item-title">Levi shoes</span>
+          <div class="cart-item-prices">
+            <span class="cart-item-discount">$74.99</span>
+            <span class="cart-item-old">$124.99</span>
+          </div>
+          <div class="cart-item-quantity">
+            <span class="material-icons card-item-control">remove</span>
+            <span>1</span>
+            <span class="material-icons card-item-control">add</span>
+          </div>
+        </div>
+      </div>
+
+      <dl class="cart-pricing">
+        <div class="cart-item-total">
+          <dd>Shipping:</dd>
+          <dt>$19</dt>
+        </div>
+        <div class="cart-item-total">
+          <dd>Total:</dd>
+          <dt>$148.98</dt>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-form">
+      <form>
+        <fieldset class="form-fieldset">
+          <legend class="form-fieldset-legend">Contact information</legend>
+          <div class="form-input-wrapper">
+            <label for="email" class="form-input-label">E-mail</label>
+            <span class="material-icons md-18 form-input-icon">email</span>
+            <input type="email" name="email" placeholder="Enter your email..." required class="form-input">
+          </div>
+          <div class="form-input-wrapper">
+            <label for="phone" class="form-input-label">Phone</label>
+            <span class="material-icons md-18 form-input-icon">call</span>
+            <input type="tel" name="phone" pattern="[0-9]" placeholder="Enter your phone..." required class="form-input">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend class="form-fieldset-legend">Shipping Address</legend>
+          
+          <div class="form-input-wrapper">
+            <label for="fullname" class="form-input-label">Full name</label>
+            <span class="material-icons md-18 form-input-icon">account_circle</span>
+            <input type="text" name="fullname" placeholder="Your name..." required class="form-input">
+          </div>
+
+          <div class="form-input-wrapper">
+            <label for="streetAddress" class="form-input-label">Address</label>
+            <span class="material-icons md-18 form-input-icon">home</span>
+            <input type="text" name="streetAddress" placeholder="Your address..." required class="form-input">
+          </div>
+
+          <div class="form-input-wrapper">
+            <label for="city" class="form-input-label">City</label>
+            <span class="material-icons md-18 form-input-icon">location_city</span>
+            <input type="text" name="city" placeholder="Your city..." required class="form-input">
+          </div>
+
+          <div class="form-grouped-inputs">
+            <div class="form-input-wrapper form-input-divided">
+              <label for="country" class="form-input-label">Country</label>
+              <span class="material-icons md-18 form-input-icon">public</span>
+              <select name="country" placeholder="Your country..." required class="form-input">
+                <option>Brazil</option>
+                <option>Canada</option>
+                <option>France</option>
+              </select>
+            </div>
+
+            <div class="form-input-wrapper form-input-divided">
+              <label for="city" class="form-input-label">Postal code</label>
+              <span class="material-icons md-18 form-input-icon">markunread_mailbox</span>
+              <input type="text" name="postalcode" placeholder="Your postal code..." required class="form-input">
+            </div>
+          </div>
+
+          <div class="form-input-wrapper form-input-checkbox">
+            <input type="checkbox" name="save">
+            <label for="save" class="form-input-label-checkbox">Save this information for next time</label>
+          </div>
+
+          <button class="button-continue">Continue</button>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      created by <b><a href="https://github.com/leticiavna">leticiavna</a></b> - devChallenges.io
+    </footer>
+  </body>
+</html>
