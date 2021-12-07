@@ -16,7 +16,7 @@
     <h1 class="title">Checkout</h1>
     <div class="grid-content">
       <main class="main-form">
-        <form>
+        <form id="checkoutForm">
           <fieldset class="form-fieldset">
             <legend class="form-fieldset-legend">Contact information</legend>
             <div class="form-input-wrapper">
@@ -27,7 +27,7 @@
             <div class="form-input-wrapper">
               <label for="phone" class="form-input-label">Phone</label>
               <span class="material-icons md-18 form-input-icon">call</span>
-              <input type="tel" name="phone" pattern="[0-9]" placeholder="Enter your phone..." required class="form-input">
+              <input type="tel" name="phone" pattern="[0-9]+" placeholder="Enter your phone..." required class="form-input">
             </div>
           </fieldset>
 
@@ -69,11 +69,11 @@
             </div>
 
             <div class="form-input-wrapper form-input-checkbox">
-              <input type="checkbox" name="save">
+              <input type="checkbox" name="save" class="form-input-checkbox">
               <label for="save" class="form-input-label-checkbox">Save this information for next time</label>
             </div>
 
-            <button class="button-continue">Continue</button>
+            <button onclick="showToastWithFormValidity()" type="button" class="button-continue">Continue</button>
           </fieldset>
         </form>
       </main>
@@ -121,6 +121,10 @@
           </div>
         </div>
       </aside>
+      
+      <div id="toast">
+        <span>Checkout successful!</span>
+      </div>
     </div>
     <footer>
       created by <b><a href="https://github.com/leticiavna">leticiavna</a></b> - devChallenges.io

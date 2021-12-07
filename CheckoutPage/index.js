@@ -36,3 +36,38 @@ function operateOnCart(inputName, operation) {
   input.onchange(quantity);
 }
 
+function validateForm() {
+  const form = document.querySelector('#checkoutForm');
+  const inputs = form.querySelectorAll('input');
+  console.log({inputs});
+  const errors = [];
+
+  inputs.forEach(input => {
+    const isInputValid = input.checkValidity();
+    if (!isInputValid) {
+      errors.push(input.name);
+    }
+  });
+
+  return errors;
+}
+
+function showToastWithFormValidity() {
+  const toast = document.querySelector('#toast');
+  const toastText = document.querySelector('#toast span');
+  const formHasErrors = validateForm();
+  let toastClassname = '';
+
+  if (formHasErrors.length > 0) {
+    toastText.innerHTML = `Please check the following fields: ${formHasErrors.join(', ')}`;
+    toastClassname = 'show-error';
+  } else {
+    toastText.innerHTML = 'Your order has been placed!';
+    toastClassname = 'show-success';
+  }
+
+  toast.className = toastClassname;
+  setTimeout(() => {
+    toast.className = toast.className.replace(toastClassname, "");
+  }, 3000);
+}

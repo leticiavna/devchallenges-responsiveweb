@@ -17,6 +17,8 @@
   --cart-bg: hsla(0, 0%, 95%, 1);
   /* cart item control background */
   --cart-control: hsla(0, 0%, 88%, 1);
+  --success: hsla(120, 75%, 65%, 1);
+  --error: hsla(0, 75%, 65%, 1);
 }
 /**
  * Reset browser styles and default tag styles 
@@ -230,8 +232,11 @@ body {
   line-height: 0.75rem;
 }
 
-.form-input-label-checkbox {
+.form-input-checkbox {
   margin-right: 8px;
+}
+
+.form-input-label-checkbox {
   display: block;
 }
 
@@ -318,4 +323,57 @@ footer {
 footer b a {
   color: var(--gray4);
   text-decoration: underline;
+}
+
+/* Alert - toast style */
+#toast {
+  visibility: hidden;
+  position: fixed;
+  width: 320px;
+  color: var(--white);
+  text-align: center;
+  border-radius: 4px;
+  padding: 12px;
+  z-index: 1;
+  bottom: 20px;
+}
+
+#toast span {
+  font-size: 0.75rem;
+}
+
+#toast.show-success, #toast.show-error {
+  visibility: visible;
+  /* Add animation: Take 0.5 seconds to fade in and out the SIMPLE-TOAST.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#toast.show-success {
+  background-color: var(--success);
+}
+
+#toast.show-error {
+  background-color: var(--error);
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 20px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 20px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 20px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 20px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }
