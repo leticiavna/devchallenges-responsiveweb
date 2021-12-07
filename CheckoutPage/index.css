@@ -231,7 +231,8 @@ body {
 }
 
 .form-input-label-checkbox {
-  margin-left: 8px;
+  margin-right: 8px;
+  display: block;
 }
 
 .form-input-icon {
@@ -242,10 +243,28 @@ body {
   font-size: 1rem;
 }
 
-/* .form-input-select {
+.form-input-select::-ms-expand {
+  display: none;
+}
+
+.form-input-select-wrapper:after {
+  font-family: "Material Icons";
+  content: '\e313';
+  font-size: 0.8rem;
+  color: var(--gray3);
+  right: 16px;
+  top: 40px;
+  background: var(--gray4);
+  padding: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  pointer-events: none;
+}
+
+.form-input-select {
   appearance: none;
-  display: grid;
-} */
+}
 
 .form-input {
   color: var(--black);
