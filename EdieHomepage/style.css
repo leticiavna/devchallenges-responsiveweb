@@ -1,0 +1,195 @@
+:root {
+  --gray1: hsla(0, 0%, 20%, 1);
+  --gray2: hsla(0, 0%, 31%, 1);
+  --gray3: hsla(0, 0%, 51%, 1);
+  --gray4: hsla(0, 0%, 74%, 1);
+  --gray5: hsla(0, 0%, 88%, 1);
+  --gray6: hsla(0, 0%, 95%, 1);
+  --blue: hsla(202, 71%, 52%, 1);
+  --green: hsla(145, 63%, 42%, 1);
+  --red: hsla(0, 79%, 63%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --footerbg: hsla(248, 35%, 8%, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* General classes */
+.blue {
+  color: var(--blue);
+}
+
+.red {
+  color: var(--red);
+}
+
+.green {
+  color: var(--green);
+}
+
+.gray-2 {
+  color: var(--gray2);
+}
+
+.gray-3 {
+  color: var(--gray3);
+}
+
+.mid-emphasis {
+  font-weight: 500;
+}
+
+.strong-emphasis {
+  font-weight: 700;
+}
+
+.small-text {
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+.large-text {
+  font-size: 1.125rem;
+}
+
+.heading-1 {
+  font-weight: 500;
+  color: var(--gray1);
+  font-size: 3rem;
+}
+
+.heading-2 {
+  font-weight: 500;
+  color: var(--gray1);
+  font-size: 2.25rem;
+}
+
+.logo {
+  font-weight: 800;
+  font-family: 'Heebo', sans-serif;
+  font-size: 2.25rem;
+}
+
+.logo-nav {
+  color: var(--gray1);
+}
+
+.logo-footer {
+  color: var(--white);
+}
+
+.main-button {
+  cursor: pointer;
+  background: var(--blue);
+  color: var(--gray6);
+  border-radius: 12px;
+  border: none;
+  padding: 16px 24px;
+  font-weight: 500px;
+  font-size: 1.125rem;
+}
+
+/* Header and nav */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  background: var(--white);
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--gray1);
+}
+
+
+/* Section 1 */
+.hero {
+  padding: 56px;
+}
+
+.hero-texts {
+  max-width: 544px;
+  margin: 0 auto;
+}
+
+.hero-heading {
+  margin-top: 16px;
+  margin-bottom: 42px;
+}
+
+.hero-image {
+  border-radius: 18px;
+}
+
+/* Section 2 */
+.contact {
+  margin-top: 42px;
+  max-width: 368px;
+  margin: 0 20%;
+}
+
+.contact p {
+  margin: 42px 0;
+}
+
+.text-field-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.text-field-wrapper button {
+  /* TODO make this go inside the input */
+}
+
+.contact-text-field {
+  background: var(--gray6);
+  border-radius: 12px;
+  border: none;
+  padding: 16px;
+  width: 100%;
+}
+
