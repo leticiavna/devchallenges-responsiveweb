@@ -8,7 +8,6 @@ My solution for the [Checkout page challenge](https://devchallenges.io/challenge
 
 - [Overview](#overview)
 - [Built With](#built-with)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -20,10 +19,3 @@ This was also a challenge to style the inputs: I had to add a custom arrow to th
 
 - HTML, CSS and a bit of JS
 - Deployed with [Surge](https://www.surge.sh/)
-
-## Acknowledgments
-
-- [CSS Grid Layout Module](https://www.w3schools.com/css/css_grid.asp)
-- [Guia CSS Grid Layout](https://www.origamid.com/projetos/css-grid-layout-guia-completo/)
-- [Mansory layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)
-- [Approaches for a CSS Masonry Layout](https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/)
