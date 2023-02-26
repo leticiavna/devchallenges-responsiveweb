@@ -1,90 +1,29 @@
-<!-- Please update value in the {}  -->
+# Checkout page
 
-<h1 align="center">{Your project name}</h1>
+My solution for the [Checkout page challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) from [Devchallenges.io](http://devchallenges.io).
 
-<div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-</div>
-
-<div align="center">
-  <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO">
-      Challenge
-    </a>
-  </h3>
-</div>
-
-<!-- TABLE OF CONTENTS -->
+- [**Check out the live demo!**](https://tgrr5ujdsghvqne.surge.sh/)
 
 ## Table of Contents
 
 - [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-
-<!-- OVERVIEW -->
+- [Built With](#built-with)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+This was a quick challenge; I added some JS to get the cart buttons working and the after submit toast appearing, accordingly to form validation. I used the `checkValidity` function to make the toast function.
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+This was also a challenge to style the inputs: I had to add a custom arrow to the select input and style the placeholders. The custom arrow is from Material Icons: the code from it is added to the `content` property on the `:after` pseudoelement.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+## Built With
 
-### Built With
+- HTML, CSS and a bit of JS
+- Deployed with [Surge](https://www.surge.sh/)
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+## Acknowledgments
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
-
-## Features
-
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the given user stories.
-
-
-## How To Use
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-```
-
-## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
-
-## Contact
-
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- [CSS Grid Layout Module](https://www.w3schools.com/css/css_grid.asp)
+- [Guia CSS Grid Layout](https://www.origamid.com/projetos/css-grid-layout-guia-completo/)
+- [Mansory layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)
+- [Approaches for a CSS Masonry Layout](https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/)

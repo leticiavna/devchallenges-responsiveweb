@@ -12,12 +12,11 @@ My solution for the [Gallery page challenge](https://devchallenges.io/challenges
 
 ## Overview
 
-![screenshot](./assets/final_desktop.png)
+I took this challenge as an opportunity to use Netlify to deploy. It sure is a complete platform for much more complex projects, but it was a nice way to discover it and learn how to use it.
 
-- mansory layout
-- css grid - more properties to explore
-- netlify
+This was also an opportunity to explore more the CSS grid: I relied heavily on `grid-template` and `grid-area` to build this. Since this was a static project, I could specify exaclty what i wanted in each area of the layout and adjust the layout based on this. If this was a project that would show up a unknown N number of images, this would have to be worked on a little more!
 
+Another concept that I could learn from this is the Mansory Layout: when items have different width and heights and should be displayed in such a way that it looks like a board (kind of like Pinterest layout). This is the concept that this project uses and it was interesting because all the images had different sizes.
 
 ## Built With
 
